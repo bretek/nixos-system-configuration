@@ -21,7 +21,6 @@ in
   imports = [
     ./desktops/default.nix
     ./hardware-configuration.nix
-    #./samba.nix
     ./steam-stream.nix
     ./users
     lanzaboote.nixosModules.lanzaboote
