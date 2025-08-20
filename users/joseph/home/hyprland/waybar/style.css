@@ -1,0 +1,58 @@
+* {
+    border: none;
+    font-family: "FiraCode Nerd Font Mono"; 
+    font-size: 12px;
+    color: #ffffff;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+}
+
+/*-----module groups----*/
+.modules-right {
+    background-color: @background;
+    border-radius: 20px 0 0 20px;
+}
+.modules-center {
+    background-color: @background;
+    border-radius: 20px;
+}
+.modules-left {
+    background-color: @background;
+    border-radius: 0 20px 20px 0;
+}
+/*-----modules indv----*/
+
+#workspaces button {
+    padding: 1px 5px;
+    background-color: transparent;
+}
+
+#workspaces button.focused {
+    background-color: @focusedButton;
+}
+
+#workspaces button.hover {
+  box-shadow: none; /* Remove predefined box-shadow */
+  text-shadow: none; /* Remove predefined text-shadow */
+  background: none; /* Remove predefined background color (white) */
+  transition: none; /* Disable predefined animations */
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#custom-power,
+#custom-menu,
+#bluetooth,
+#idle_inhibitor {
+    padding: 2px 10px;
+}

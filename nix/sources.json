@@ -1,0 +1,87 @@
+{
+    "agenix": {
+        "branch": "main",
+        "description": "age-encrypted secrets for NixOS and Home manager",
+        "homepage": "https://matrix.to/#/#agenix:nixos.org",
+        "owner": "ryantm",
+        "repo": "agenix",
+        "rev": "9edb1787864c4f59ae5074ad498b6272b3ec308d",
+        "sha256": "06w2dxnf8qxwcmqvgyxnrrx62ca5x1cw3lminpgs112md17wa3rl",
+        "type": "tarball",
+        "url": "https://github.com/ryantm/agenix/archive/9edb1787864c4f59ae5074ad498b6272b3ec308d.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "base16-schemes": {
+        "branch": "main",
+        "description": "All the color schemes for use in base16 packages",
+        "homepage": "",
+        "owner": "tinted-theming",
+        "repo": "base16-schemes",
+        "rev": "2b6f2d0677216ddda50c9cabd6ee70fae4665f81",
+        "sha256": "1pb979mwamg82pkx0bnim9sw129jvswialrsgarn9qa25mk36dsm",
+        "type": "tarball",
+        "url": "https://github.com/tinted-theming/base16-schemes/archive/2b6f2d0677216ddda50c9cabd6ee70fae4665f81.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "home-manager": {
+        "branch": "release-25.05",
+        "description": "Manage a user environment using Nix  [maintainer=@khaneliman, @rycee] ",
+        "homepage": "https://nix-community.github.io/home-manager/",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "fc3add429f21450359369af74c2375cb34a2d204",
+        "sha256": "026rvynmzmpigax9f8gy9z67lsl6dhzv2p6s8wz4w06v3gjvspm1",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/home-manager/archive/fc3add429f21450359369af74c2375cb34a2d204.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "lanzaboote": {
+        "branch": "master",
+        "description": "Secure Boot for NixOS [maintainers=@blitz @raitobezarius @nikstur]",
+        "homepage": "",
+        "owner": "nix-community",
+        "repo": "lanzaboote",
+        "rev": "v0.4.2",
+        "sha256": "0xc1wawnb0297h5khxblmf9pd1fry950xkcm7mwlck19s2906h80",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/lanzaboote/archive/v0.4.2.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "0.4.2"
+    },
+    "nix-colors": {
+        "branch": "main",
+        "description": "Modules and schemes to make theming with Nix awesome.",
+        "homepage": "",
+        "owner": "Misterio77",
+        "repo": "nix-colors",
+        "rev": "b01f024090d2c4fc3152cd0cf12027a7b8453ba1",
+        "sha256": "0y9h042qrfjfys1gga65mkxd8j723xwivmcy94vfwnvnc9xy0dw5",
+        "type": "tarball",
+        "url": "https://github.com/Misterio77/nix-colors/archive/b01f024090d2c4fc3152cd0cf12027a7b8453ba1.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "release-25.05",
+        "description": "Nix Packages collection",
+        "homepage": null,
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "22e6141f9c24030dbbd0a7b7c55f5714830e22b5",
+        "sha256": "153c4vr9lgsvr9ls81c4fwcsgnwv012zmldzdjcwmdvaqvc1hjmf",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/22e6141f9c24030dbbd0a7b7c55f5714830e22b5.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixvim": {
+        "branch": "nixos-25.05",
+        "description": "Configure Neovim with Nix! [maintainers=@GaetanLepage, @traxys, @mattsturgeon, @khaneliman]",
+        "homepage": "https://nix-community.github.io/nixvim",
+        "owner": "nix-community",
+        "repo": "nixvim",
+        "rev": "ab1b5962e1ca90b42de47e1172e0d24ca80e6256",
+        "sha256": "08pllbq3vbz0mn6xbp2gddi8bfs12vdraivp8k91q6bk8lkmsgk3",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/nixvim/archive/ab1b5962e1ca90b42de47e1172e0d24ca80e6256.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
