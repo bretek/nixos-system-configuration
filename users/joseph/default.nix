@@ -29,7 +29,7 @@ in
       ../../secrets/joseph-user-options.nix
     ];
 
-    age.secrets.secret1.file = /home/joseph/nixos/secrets/secret1.age;
+    age.secrets.secret1.file = ../../secrets/secret1.age;
 
     colorScheme = nix-colors.colorSchemes.material-darker;
     xdg = {
