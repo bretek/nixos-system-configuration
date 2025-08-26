@@ -8,13 +8,13 @@ let
   nix-colors = import sources.nix-colors { };
 in
 {
+  imports = [ ./packages.nix ];
   users.users.joseph = {
     extraGroups = [
       "wheel"
       "networkmanager"
     ];
     isNormalUser = true;
-    packages = import ./packages pkgs;
     shell = pkgs.zsh;
   };
   programs.zsh.enable = true;
