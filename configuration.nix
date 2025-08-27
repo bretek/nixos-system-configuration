@@ -19,6 +19,7 @@ in
   ];
 
   imports = [
+    ./nixos.nix
     ./desktops/default.nix
     ./hardware-configuration.nix
     ./steam-stream.nix
