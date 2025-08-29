@@ -156,18 +156,11 @@ in
   environment.systemPackages = with pkgs; [
     firefox-wayland
     protonplus
-    oversteer
     wineWowPackages.stable
     winetricks
-    steamtinkerlaunch
 
     git
     unzip
-    wget
-    xdotool
-    xxd
-    xorg.xwininfo
-    yad
     (pkgs.callPackage (agenix + "/pkgs/agenix.nix") { })
   ];
 
