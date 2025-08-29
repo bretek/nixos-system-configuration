@@ -131,7 +131,6 @@
 
       exec-once = [
         "${lib.getExe pkgs.hypridle}"
-        "${lib.getExe pkgs.hyprpaper}"
         "${lib.getExe pkgs.waybar}"
         "${lib.getExe pkgs.dunst}"
         "${lib.getExe pkgs.wayland-pipewire-idle-inhibit}"
