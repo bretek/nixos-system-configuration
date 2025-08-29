@@ -21,6 +21,7 @@ in
   imports = [
     ./nixos.nix
     ./desktops/default.nix
+    ./drives
     ./hardware-configuration.nix
     ./steam-stream.nix
     ./users
@@ -39,10 +40,6 @@ in
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.supportedFilesystems = [
-    "nfs"
-    "btrfs"
-  ];
 
   # GPU
   services.xserver.enable = true;
@@ -73,28 +70,6 @@ in
 
   };
 
-  fileSystems."/".options = [ "noatime" ];
-
-  # NFS
-  fileSystems."/mnt/media" = {
-    device = "nas.mad.internal:/media";
-    fsType = "nfs";
-    options = [
-      "x-systemd.automount"
-      "nofail"
-      "noatime"
-    ];
-  };
-  fileSystems."/mnt/nas" = {
-    device = "nas.mad.internal:/nas";
-    fsType = "nfs";
-    options = [
-      "x-systemd.automount"
-      "noauto"
-      "noatime"
-    ];
-  };
-
   programs.gamemode.enable = true;
   nixpkgs.config.packageOverrides = pkgs: {
     steam = pkgs.steam.override {
@@ -115,15 +90,6 @@ in
   #hardware.graphics.extraPackages32 = with pkgs; [
   #  driversi686Linux.amdvlk
   #];
-
-  # DRIVES
-  fileSystems."/mnt/NVME" = {
-    device = "/dev/disk/by-uuid/ffb2fa16-885d-4ff2-9c8b-78d9682107cf";
-    fsType = "btrfs";
-    options = [
-      "nofail"
-    ];
-  };
 
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
