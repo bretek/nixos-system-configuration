@@ -14,29 +14,15 @@ in
     (agenix + "/modules/age.nix")
   ];
 
-  # BOOT
   boot.initrd.systemd.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  programs.gamemode.enable = true;
-  nixpkgs.config.packageOverrides = pkgs: {
-    steam = pkgs.steam.override {
-      extraPkgs =
-        pkgs: with pkgs; [
-          pango
-          libthai
-          harfbuzz
-        ];
-      privateTmp = false;
-    };
-  };
 
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
 
-  home-manager = {
-    useGlobalPkgs = true;
-  };
+  security.polkit.enable = true;
+  powerManagement.enable = true;
+  home-manager.useGlobalPkgs = true;
 
   # NETWORKING
   networking = {
@@ -61,11 +47,11 @@ in
   # APPS
   environment.systemPackages = with pkgs; [
     firefox-wayland
+
     protonplus
     wineWowPackages.stable
     winetricks
 
-    git
     unzip
     (pkgs.callPackage (agenix + "/pkgs/agenix.nix") { })
   ];
@@ -80,17 +66,22 @@ in
 
       "xow_dongle-firmware"
     ];
+
+  nixpkgs.config.packageOverrides = pkgs: {
+    steam = pkgs.steam.override {
+      extraPkgs =
+        pkgs: with pkgs; [
+          pango
+          libthai
+          harfbuzz
+        ];
+      privateTmp = false;
+    };
+  };
   programs.steam = {
     enable = true;
     localNetworkGameTransfers.openFirewall = true;
   };
 
-  security.polkit.enable = true;
-
-  powerManagement.enable = true;
-
-    };
-  };
-
-  system.copySystemConfiguration = true;
+  programs.gamemode.enable = true;
 }
