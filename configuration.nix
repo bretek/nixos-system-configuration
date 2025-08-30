@@ -6,10 +6,8 @@ let
 in
 {
   imports = [
-    ./nixos.nix
     ./desktops/default.nix
-    ./secure-boot.nix
-    ./steam-stream.nix
+    ./modules
     ./overlays
     ./users
     (home-manager + "/nixos")
