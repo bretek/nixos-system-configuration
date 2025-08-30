@@ -31,7 +31,6 @@ in
 
   # BOOT
   boot.initrd.systemd.enable = true;
-  #boot.initrd.kernelModules = [ "amdgpu" ];
   boot.loader.efi.canTouchEfiVariables = true;
 
 
@@ -76,14 +75,6 @@ in
       privateTmp = false;
     };
   };
-
-  #hardware.graphics.extraPackages = with pkgs; [
-  #  amdvlk
-  #];
-  # For 32 bit applications
-  #hardware.graphics.extraPackages32 = with pkgs; [
-  #  driversi686Linux.amdvlk
-  #];
 
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -140,17 +131,6 @@ in
   };
 
   security.polkit.enable = true;
-  security.sudo.extraRules = [
-    {
-      users = [ "joseph" ];
-      commands = [
-        {
-          command = "/run/current-system/sw/bin/nix-store";
-          options = [ "NOPASSWD" ];
-        }
-      ];
-    }
-  ];
 
   # SERVICES
   powerManagement.enable = true;
