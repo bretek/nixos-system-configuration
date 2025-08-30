@@ -5,4 +5,6 @@
     ./gpu.nix
     ./hardware-configuration.nix
   ];
+
+  system.stateVersion = "23.11";
 }
