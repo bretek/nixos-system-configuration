@@ -12,5 +12,10 @@
       };
     };
     thermald.enable = true;
+    xrdp = {
+      enable = true;
+      defaultWindowManager = "startplasma-x11";
+      openFirewall = true;
+    };
   };
 }
