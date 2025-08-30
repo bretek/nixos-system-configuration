@@ -20,8 +20,6 @@ in
   imports = [
     ./nixos.nix
     ./desktops/default.nix
-    ./drives
-    ./hardware-configuration.nix
     ./secure-boot.nix
     ./steam-stream.nix
     ./users
