@@ -2,7 +2,8 @@
 {
   imports = [
     ../../configuration.nix
-    ./hardware-configuration.nix
     ./drives
+    ./gpu.nix
+    ./hardware-configuration.nix
   ];
 }

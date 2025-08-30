@@ -18,16 +18,6 @@ in
   boot.initrd.systemd.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-
-  # GPU
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" ];
-  systemd.tmpfiles.rules = [
-    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
-  ];
-  environment.variables = {
-    ROC_ENABLE_PRE_VEGA = "1";
-  };
   programs.tuxclocker.enable = true;
   hardware = {
     # HARDWARE
