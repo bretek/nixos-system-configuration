@@ -1,7 +1,6 @@
 { pkgs, lib, ... }:
 let
   sources = import ./nix/sources.nix;
-  lanzaboote = import sources.lanzaboote;
   home-manager = sources.home-manager;
   agenix = sources.agenix;
 in
@@ -23,9 +22,9 @@ in
     ./desktops/default.nix
     ./drives
     ./hardware-configuration.nix
+    ./secure-boot.nix
     ./steam-stream.nix
     ./users
-    lanzaboote.nixosModules.lanzaboote
     (home-manager + "/nixos")
     (agenix + "/modules/age.nix")
   ];
@@ -33,11 +32,6 @@ in
   # BOOT
   boot.initrd.systemd.enable = true;
   #boot.initrd.kernelModules = [ "amdgpu" ];
-  boot.loader.systemd-boot.enable = false;
-  boot.lanzaboote = {
-    enable = true;
-    pkiBundle = "/var/lib/sbctl";
-  };
   boot.loader.efi.canTouchEfiVariables = true;
 
 
