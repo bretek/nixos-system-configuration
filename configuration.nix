@@ -18,25 +18,6 @@ in
   boot.initrd.systemd.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  hardware = {
-    # HARDWARE
-    bluetooth.enable = true;
-    steam-hardware.enable = true;
-    xone.enable = true;
-    usb-modeswitch.enable = true;
-
-    graphics = {
-      extraPackages = with pkgs; [
-        intel-media-driver
-        intel-vaapi-driver
-        libvdpau-va-gl
-      ];
-      enable = true;
-      enable32Bit = true;
-    };
-
-  };
-
   programs.gamemode.enable = true;
   nixpkgs.config.packageOverrides = pkgs: {
     steam = pkgs.steam.override {
