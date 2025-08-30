@@ -87,23 +87,9 @@ in
 
   security.polkit.enable = true;
 
-  # SERVICES
   powerManagement.enable = true;
 
-  services = {
-    pipewire.enable = true;
-    printing.enable = true;
-    fstrim.enable = true;
-
-    fail2ban.enable = true;
-    openssh = {
-      enable = true;
-      settings = {
-        PasswordAuthentication = true;
-        AllowUsers = [ "joseph" ];
-      };
     };
-    dbus.enable = true;
   };
 
   system.copySystemConfiguration = true;
