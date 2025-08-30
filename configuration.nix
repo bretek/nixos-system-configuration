@@ -18,7 +18,6 @@ in
   boot.initrd.systemd.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  programs.tuxclocker.enable = true;
   hardware = {
     # HARDWARE
     bluetooth.enable = true;
