@@ -1,12 +1,13 @@
 { pkgs, lib, ... }:
 {
   imports = [
-    ./rofi.nix
     ./dunst.nix
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
+    ./rofi.nix
     ./waybar
+    ./wl-kbptr.nix
     ./wlogout
   ];
 
@@ -157,7 +158,7 @@
         "$mainMod, S, exec, ${./scripts/RofiSearch.sh}"
         "$mainMod ALT, H, exec, ${./scripts/RofiKeyBinds.sh}"
         "$mainMod, V, exec, ${./scripts/ClipManager.sh}"
-        "$mainMod, M, exec, wl-kbptr -o modes=floating -o mode_floating.source=detect"
+        "$mainMod, M, exec, wl-kbptr"
         #TODO screenshot
         #"$mainMod ALT, S, exec, rofi-screenshot"
 
