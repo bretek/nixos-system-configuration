@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./csharp.nix
     ./nix.nix
   ];
   programs.nixvim.plugins = {
