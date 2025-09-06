@@ -47,6 +47,7 @@ in
   # APPS
   environment.systemPackages = with pkgs; [
     firefox-wayland
+    libreoffice-qt
 
     protonplus
     wineWowPackages.stable
