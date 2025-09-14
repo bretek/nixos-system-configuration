@@ -14,7 +14,6 @@ let
 in
 {
   home.packages = with pkgs; [
-    rofi-vpn
     rofi-rbw
     rofi-bluetooth
     # TODO package wayland version

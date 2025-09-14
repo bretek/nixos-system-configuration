@@ -150,8 +150,7 @@
         "$mainMod, D, exec, rofi -show drun"
         "$mainMod ALT, E, exec, rofi -show emoji"
         "$mainMod ALT, N, exec, rofi-network-manager"
-        # TODO fix vpn config permissions
-        "$mainMod ALT, V, exec, rofi-vpn"
+        "$mainMod ALT, V, exec, ${./scripts/RofiVpn.sh}"
         "$mainMod ALT, B, exec, rofi-bluetooth"
         "$mainMod ALT, P, exec, rofi-rbw"
         "$mainMod ALT, M, exec, ${./scripts/RofiBeats.sh}"
