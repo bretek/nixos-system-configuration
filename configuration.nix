@@ -9,6 +9,7 @@ in
     ./desktops/default.nix
     ./modules
     ./overlays
+    ./secrets/configuration.nix
     ./users
     (home-manager + "/nixos")
     (agenix + "/modules/age.nix")
