@@ -36,7 +36,7 @@ in
     enableDefaultPackages = true;
     packages = [
       pkgs.inter
-      pkgs.nerd-fonts.fira-code
+      pkgs.nerd-fonts.fira-mono
     ];
     fontconfig.defaultFonts = {
       serif = [ "Inter" ];
