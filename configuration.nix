@@ -74,9 +74,15 @@ in
     steam = pkgs.steam.override {
       extraPkgs =
         pkgs: with pkgs; [
-          pango
-          libthai
           harfbuzz
+          libthai
+          pango
+          tree
+          wget
+          xdotool
+          xorg.xrandr
+          xxd
+          yad
         ];
       privateTmp = false;
     };
