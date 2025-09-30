@@ -30,6 +30,7 @@ in
     hostName = "NixDesktop";
     networkmanager.enable = true;
   };
+  environment.etc.hosts.mode = "0755";
 
   # FONTS
   fonts = {
@@ -93,4 +94,10 @@ in
   };
 
   programs.gamemode.enable = true;
+
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+  users.extraGroups.docker.members = [ "joseph" ];
 }

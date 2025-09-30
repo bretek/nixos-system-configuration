@@ -9,4 +9,6 @@
     ./tmux.nix
     ./zsh.nix
   ];
+
+  programs.lazydocker.enable = true;
 }
