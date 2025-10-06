@@ -1,6 +1,13 @@
-{ pkgs, lib, ... }:
+{
+  config,
+  lib,
+  ...
+}:
 let
   sources = import ./nix/sources.nix;
+  pkgs = import sources.nixpkgs {
+    config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) config.allowedUnfree;
+  };
   home-manager = sources.home-manager;
   agenix = sources.agenix;
 in
@@ -8,12 +15,15 @@ in
   imports = [
     ./desktops/default.nix
     ./modules
+    ./options/allowed-unfree.nix
     ./overlays
     ./secrets/configuration.nix
     ./users
     (home-manager + "/nixos")
     (agenix + "/modules/age.nix")
   ];
+
+  nixpkgs.pkgs = pkgs;
 
   boot.initrd.systemd.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -52,7 +62,6 @@ in
     libreoffice-qt
     vlc
 
-    protonplus
     wineWowPackages.stable
     winetricks
 
@@ -60,40 +69,10 @@ in
     (pkgs.callPackage (agenix + "/pkgs/agenix.nix") { })
   ];
 
-  nixpkgs.config.allowUnfreePredicate =
-    pkg:
-    builtins.elem (lib.getName pkg) [
-      "steam"
-      "steam-original"
-      "steam-unwrapped"
-      "steam-run"
-
-      "xow_dongle-firmware"
-    ];
-
-  nixpkgs.config.packageOverrides = pkgs: {
-    steam = pkgs.steam.override {
-      extraPkgs =
-        pkgs: with pkgs; [
-          harfbuzz
-          libthai
-          pango
-          tree
-          wget
-          xdotool
-          xorg.xrandr
-          xxd
-          yad
-        ];
-      privateTmp = false;
-    };
-  };
-  programs.steam = {
-    enable = true;
-    localNetworkGameTransfers.openFirewall = true;
-  };
-
-  programs.gamemode.enable = true;
+  allowedUnfree = [
+    "terraform"
+    "xow_dongle-firmware"
+  ];
 
   virtualisation.docker.rootless = {
     enable = true;
