@@ -5,6 +5,8 @@
     settings = {
       general = {
         hide_cursor = true;
+        grace = 5000;
+        no_fade_in = false;
         disable_loading_bar = true;
       };
       background = {
