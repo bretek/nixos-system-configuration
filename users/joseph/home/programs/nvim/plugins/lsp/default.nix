@@ -2,6 +2,7 @@
 {
   imports = [
     ./csharp.nix
+    ./docker.nix
     ./nix.nix
     ./terraform.nix
   ];
