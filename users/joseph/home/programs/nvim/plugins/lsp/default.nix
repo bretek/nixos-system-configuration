@@ -6,6 +6,7 @@
   ];
   programs.nixvim.plugins = {
     lsp = {
+      enable = true;
       keymaps = {
         lspBuf = {
           K = "hover";
