@@ -3,6 +3,7 @@
   imports = [
     ./csharp.nix
     ./nix.nix
+    ./terraform.nix
   ];
   programs.nixvim.plugins = {
     lsp = {
