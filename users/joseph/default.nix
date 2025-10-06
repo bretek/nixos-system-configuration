@@ -16,6 +16,8 @@ in
     ];
     isNormalUser = true;
     shell = pkgs.zsh;
+
+    openssh.authorizedKeys.keyFiles = [ ../../keys/id_ed25519_joseph.pub ];
   };
   programs.zsh.enable = true;
 
