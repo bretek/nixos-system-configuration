@@ -45,8 +45,6 @@ in
         config.common.default = "*";
       };
     };
-
-    home.stateVersion = "25.05";
   };
   environment.pathsToLink = [
     "/share/xdg-desktop-portal"
