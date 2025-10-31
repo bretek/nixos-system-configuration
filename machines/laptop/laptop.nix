@@ -8,8 +8,8 @@
   ];
 
   home-manager.users.joseph = {
-    home.stateVersion = "23.11";
+    home.stateVersion = "25.05";
   };
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.05";
 }

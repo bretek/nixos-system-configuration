@@ -5,7 +5,7 @@
     fsType = "nfs";
     options = [
       "x-systemd.automount"
-      "noauto"
+      "nofail"
       "noatime"
     ];
   };
