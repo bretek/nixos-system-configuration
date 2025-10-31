@@ -16,6 +16,7 @@ in
     ./desktops/default.nix
     ./modules
     ./options/allowed-unfree.nix
+    ./options/system-options.nix
     ./overlays
     ./secrets/configuration.nix
     ./users
@@ -37,8 +38,11 @@ in
 
   # NETWORKING
   networking = {
-    hostName = "NixDesktop";
-    networkmanager.enable = true;
+    hostName = config.system-options.name;
+    networkmanager = {
+      enable = true;
+      wifi.powersave = config.system-options.isLaptop;
+    };
   };
   environment.etc.hosts.mode = "0755";
 
