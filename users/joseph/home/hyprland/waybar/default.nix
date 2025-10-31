@@ -22,7 +22,10 @@
         layer = "top";
         position = "top";
 
-        modules-left = [ "hyprland/workspaces" ];
+        modules-left = [
+          "custom/appmenu"
+          "hyprland/workspaces"
+        ];
         modules-center = [ "clock" ];
         modules-right = [
           "pulseaudio"
@@ -30,6 +33,12 @@
           "network"
           "battery"
         ];
+
+        "custom/appmenu" = {
+          format = "";
+          tooltip = false;
+          on-click = "rofi -show drun";
+        };
 
         pulseaudio = {
           format = " {volume}%";
