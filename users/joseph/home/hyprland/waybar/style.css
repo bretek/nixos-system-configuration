@@ -1,6 +1,6 @@
 * {
     border: none;
-    font-family: "FiraCode Nerd Font Mono"; 
+    font-family: "Fira Mono", "Symbols Nerd Font";
     font-size: 12px;
     color: #ffffff;
 }
@@ -25,11 +25,12 @@ window#waybar {
 /*-----modules indv----*/
 
 #workspaces button {
-    padding: 1px 5px;
+    padding: 1px 4px;
     background-color: transparent;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
+    padding: 1px 10px;
     background-color: @focusedButton;
 }
 
@@ -40,19 +41,13 @@ window#waybar {
   transition: none; /* Disable predefined animations */
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#network,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#custom-power,
-#custom-menu,
-#bluetooth,
-#idle_inhibitor {
-    padding: 2px 10px;
+.module {
+    padding: 2px 6px;
+}
+
+#battery.warning {
+    color: @warningOrange;
+}
+#battery.critical {
+    color: @warningRed;
 }

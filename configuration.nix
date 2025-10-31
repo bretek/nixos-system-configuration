@@ -47,12 +47,13 @@ in
     enableDefaultPackages = true;
     packages = [
       pkgs.inter
-      pkgs.nerd-fonts.fira-mono
+      pkgs.fira-mono
+      pkgs.nerd-fonts.symbols-only
     ];
     fontconfig.defaultFonts = {
       serif = [ "Inter" ];
       sansSerif = [ "Inter" ];
-      monospace = [ "FiraCode Nerd Font Mono" ];
+      monospace = [ "Fira Mono" ];
     };
   };
 
