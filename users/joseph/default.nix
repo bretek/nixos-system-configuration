@@ -29,7 +29,7 @@ in
       (sources.agenix + "/modules/age-home.nix")
       ./home
       ../user-options.nix
-      ../../secrets/joseph-user-options.nix
+      ../../secrets/joseph/user-options.nix
     ];
 
     age.secrets.secret1.file = ../../secrets/secret1.age;
