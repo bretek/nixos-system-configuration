@@ -1,20 +1,20 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    wdisplays
-    swayimg
-    rofi-wayland
     brillo
     dunst
-    hyprpaper
-    wlogout
-    waybar
     hypridle
     hyprlock
+    hyprpaper
     playerctl
+    rofi-wayland
+    swayimg
+    waybar
     wayland-pipewire-idle-inhibit
-
     wayprompt
+    wdisplays
+    wlogout
+
     kooha
     wob
     cliphist
