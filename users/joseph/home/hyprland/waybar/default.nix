@@ -32,12 +32,19 @@
           "bluetooth"
           "network"
           "battery"
+          "custom/power"
         ];
 
         "custom/appmenu" = {
           format = "";
           tooltip = false;
           on-click = "rofi -show drun";
+        };
+
+        "custom/power" = {
+          format = "󰐥";
+          tooltip = false;
+          on-click = "${../scripts/Wlogout.sh}";
         };
 
         pulseaudio = {
