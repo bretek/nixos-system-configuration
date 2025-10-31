@@ -12,6 +12,8 @@
       ''
         @define-color background alpha(#${config.colorScheme.palette.base01}, 0.85);
         @define-color focusedButton alpha(#${config.colorScheme.palette.base02}, 0.85);
+        @define-color warningOrange #${config.colorScheme.palette.base0A};
+        @define-color warningRed #${config.colorScheme.palette.base0F};
 
         @import "${./style.css}";
       ''
@@ -48,7 +50,14 @@
         };
 
         pulseaudio = {
-          format = " {volume}%";
+          format = "{icon}";
+          format-icons = [
+            "󰕿"
+            "󰖀"
+            "󰕾"
+          ];
+          format-muted = "󰝟";
+          max-volume = 100;
           on-click = "${lib.getExe pkgs.pavucontrol}";
         };
 
@@ -81,18 +90,40 @@
         };
 
         battery = {
-          format = "{icon} {capacity}%";
-          format-charging = " {capacity}%";
-          format-plugged = " {capacity}%";
-          full-at = 80;
-          tooltip = false;
-          "format-icons" = [
-            ""
-            ""
-            ""
-            ""
-            ""
-          ];
+          design-capacity = true;
+          format = "{icon}";
+          format-icons = {
+            default = [
+              "󰂎"
+              "󰁺"
+              "󰁻"
+              "󰁼"
+              "󰁽"
+              "󰁾"
+              "󰁿"
+              "󰂀"
+              "󰂁"
+              "󰂂"
+              "󰁹"
+            ];
+            charging = [
+              "󰢟"
+              "󰢜"
+              "󰂆"
+              "󰂇"
+              "󰂈"
+              "󰢝"
+              "󰂉"
+              "󰢞"
+              "󰂊"
+              "󰂋"
+              "󰂅"
+            ];
+          };
+          states = {
+            warning = 30;
+            critical = 15;
+          };
         };
 
         clock = {
