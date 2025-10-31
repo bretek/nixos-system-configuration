@@ -26,6 +26,8 @@ in
 
   nixpkgs.pkgs = pkgs;
 
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   boot.initrd.systemd.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
