@@ -82,7 +82,7 @@
 
         network = {
           format-wifi = " {icon}";
-          format-ethernet = "󰌙";
+          format-ethernet = "󰈀";
           format-disconnected = "";
           tooltip-format = "{ipaddr} {bandwidthUpBits} {bandwidthDownBits}";
           tooltip-format-wifi = "{essid} {icon} {signalStrength}%";
