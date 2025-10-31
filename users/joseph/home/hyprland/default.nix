@@ -54,8 +54,18 @@
         "DP-1, 3840x1600@144, 0x0, 1"
       ];
 
+      device = [
+        {
+          name = "at-translated-set-2-keyboard";
+          kb_layout = "gb,gb";
+          kb_variant = ",colemak";
+        }
+      ];
+
       input = {
-        kb_layout = "us";
+        kb_layout = "us,us";
+        kb_variant = ",colemak";
+        kb_options = "caps:backspace";
         repeat_delay = "250";
         repeat_rate = "30";
 
@@ -154,6 +164,7 @@
         "$mainMod ALT, B, exec, rofi-bluetooth"
         "$mainMod ALT, P, exec, rofi-rbw"
         "$mainMod, S, exec, ${./scripts/RofiSearch.sh}"
+        "$mainMod ALT, K, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
         "$mainMod ALT, H, exec, ${./scripts/RofiKeyBinds.sh}"
         "$mainMod, V, exec, ${./scripts/ClipManager.sh}"
         "$mainMod, M, exec, wl-kbptr"

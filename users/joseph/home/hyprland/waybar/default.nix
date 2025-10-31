@@ -30,6 +30,7 @@
         ];
         modules-center = [ "clock" ];
         modules-right = [
+          "hyprland/language"
           "pulseaudio"
           "bluetooth"
           "network"
@@ -47,6 +48,13 @@
           format = "󰐥";
           tooltip = false;
           on-click = "${../scripts/Wlogout.sh}";
+        };
+
+        "hyprland/language" = {
+          format = "󰌌 {long}";
+          keyboard-name = "at-translated-set-2-keyboard";
+          on-click = "hyprctl switchxkblayout at-translated-set-2-keyboard next";
+          expand = true;
         };
 
         pulseaudio = {
