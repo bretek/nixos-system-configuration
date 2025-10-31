@@ -10,6 +10,7 @@
     waybar
     hypridle
     hyprlock
+    playerctl
     wayland-pipewire-idle-inhibit
 
     wayprompt
