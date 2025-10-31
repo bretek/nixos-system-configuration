@@ -127,8 +127,17 @@
         };
 
         clock = {
-          "format" = "{:%F %R}";
-          tooltip = false;
+          format = "{:%F %R}";
+          tooltip-format = "<span>{calendar}</span>";
+          calendar = {
+            mode = "month";
+            format = {
+              months = "<span color='#${config.colorScheme.palette.base07}'><b>{}</b></span>";
+              days = "<span color='#${config.colorScheme.palette.base07}'><b>{}</b></span>";
+              weekdays = "<span color='#${config.colorScheme.palette.base07}'><b>{}</b></span>";
+              today = "<span color='#${config.colorScheme.palette.base04}'><b>{}</b></span>";
+            };
+          };
         };
       };
     };
