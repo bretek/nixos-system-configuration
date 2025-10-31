@@ -5,39 +5,59 @@
     settings = {
       general = {
         hide_cursor = true;
-        grace = 5000;
+        grace = 5;
         no_fade_in = false;
-        disable_loading_bar = true;
       };
+
+      animations = {
+        enabled = true;
+        bezier = [
+          "easeInOutCubic, 0.65, 0, 0.35, 1"
+        ];
+        animation = [
+          "fadeIn, 1, 15, easeInOutCubic"
+        ];
+      };
+
       background = {
         path = "${./wallpapers/black_sand.jpg}";
-        blur_size = 3;
+        blur_size = 1;
+        blur_passes = 2;
       };
+
+      shape = [
+        {
+          size = "230, 40";
+          color = "rgb(${config.colorScheme.palette.base01})";
+          rounding = -1;
+          border_size = 0;
+          xray = false;
+          position = "0, 0";
+          halign = "center";
+          valign = "center";
+        }
+      ];
 
       label = [
         {
-          text = "cmd[update:0] echo \"   $USER\" | tr '[:lower:]' '[:upper:]'";
+          text = " $USER";
           color = "rgb(${config.colorScheme.palette.base05})";
-          font_size = 10;
+          outline_thickness = 2;
+          dots_size = 0.2;
+          dots_spacing = 0.4;
+          dots_center = true;
+          font_size = 11;
           position = "0, 0";
-          halign = "left";
-          valign = "top";
+          halign = "center";
+          valign = "center";
         }
         {
-          text = "cmd[update:1000] echo $TIME";
+          text = "$TIME";
           color = "rgb(${config.colorScheme.palette.base05})";
           font_size = 80;
           position = "0, 100";
           halign = "center";
           valign = "center";
-        }
-        {
-          text = "cmd[update:18000000] echo \"<b> \"$(date +'%A %F')\" </b>\"";
-          color = "rgb(${config.colorScheme.palette.base05})";
-          font_size = 20;
-          position = "-5, -5";
-          halign = "right";
-          valign = "top";
         }
       ];
 
