@@ -203,6 +203,8 @@
         "$mainMod SHIFT, RIGHT, resizeactive,50 0"
         "$mainMod SHIFT, UP, resizeactive,0 -50"
         "$mainMod SHIFT, DOWN, resizeactive,0 50"
+        ",XF86MonBrightnessUp, exec, brillo -q -A 5"
+        ",XF86MonBrightnessDown, exec, brillo -q -U 5"
       ];
 
       bindle = [

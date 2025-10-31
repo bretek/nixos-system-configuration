@@ -13,6 +13,7 @@ in
     extraGroups = [
       "wheel"
       "networkmanager"
+      "video"
     ];
     isNormalUser = true;
     shell = pkgs.zsh;

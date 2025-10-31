@@ -4,6 +4,7 @@
     wdisplays
     swayimg
     rofi-wayland
+    brillo
     dunst
     hyprpaper
     wlogout
@@ -19,6 +20,8 @@
     cliphist
     grim
   ];
+
+  hardware.brillo.enable = true;
 
   programs.hyprland = {
     enable = true;
