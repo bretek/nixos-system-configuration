@@ -155,18 +155,17 @@
         "$mainMod, Backspace, exec, ${./scripts/Wlogout.sh}"
 
         # Programs
-        # TODO add scripts
         "$mainMod, RETURN, exec, $terminal"
         "$mainMod, D, exec, rofi -show drun"
         "$mainMod ALT, E, exec, rofi -show emoji"
         "$mainMod ALT, N, exec, rofi-network-manager"
         "$mainMod ALT, V, exec, ${./scripts/RofiVpn.sh}"
         "$mainMod ALT, B, exec, rofi-bluetooth"
-        "$mainMod ALT, P, exec, rofi-rbw"
-        "$mainMod, S, exec, ${./scripts/RofiSearch.sh}"
+        "$mainMod ALT, P, exec, rofi-rbw" # TODO crashes
         "$mainMod ALT, K, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
+        "$mainMod, S, exec, ${./scripts/RofiSearch.sh}" # TODO script
         "$mainMod ALT, H, exec, ${./scripts/RofiKeyBinds.sh}"
-        "$mainMod, V, exec, ${./scripts/ClipManager.sh}"
+        "$mainMod, V, exec, ${./scripts/ClipManager.sh}" # TODO script
         "$mainMod, M, exec, wl-kbptr"
         #TODO screenshot
         #"$mainMod ALT, S, exec, rofi-screenshot"
