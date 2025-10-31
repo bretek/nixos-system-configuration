@@ -153,7 +153,6 @@
         "$mainMod ALT, V, exec, ${./scripts/RofiVpn.sh}"
         "$mainMod ALT, B, exec, rofi-bluetooth"
         "$mainMod ALT, P, exec, rofi-rbw"
-        "$mainMod ALT, M, exec, ${./scripts/RofiBeats.sh}"
         "$mainMod, S, exec, ${./scripts/RofiSearch.sh}"
         "$mainMod ALT, H, exec, ${./scripts/RofiKeyBinds.sh}"
         "$mainMod, V, exec, ${./scripts/ClipManager.sh}"
