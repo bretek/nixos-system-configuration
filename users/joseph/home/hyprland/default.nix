@@ -196,17 +196,17 @@
         "$mainMod ALT, UP, swapwindow, u"
         "$mainMod ALT, DOWN, swapwindow, d"
 
-        "$mainMod, Q, workspace, 1"
-        "$mainMod, W, workspace, 2"
-        "$mainMod, F, workspace, 3"
-        "$mainMod, P, workspace, 4"
-        "$mainMod, G, workspace, 5"
+        "$mainMod, 1, workspace, 1"
+        "$mainMod, 2, workspace, 2"
+        "$mainMod, 3, workspace, 3"
+        "$mainMod, 4, workspace, 4"
+        "$mainMod, 5, workspace, 5"
 
-        "$mainMod SHIFT, Q, movetoworkspace, 1"
-        "$mainMod SHIFT, W, movetoworkspace, 2"
-        "$mainMod SHIFT, F, movetoworkspace, 3"
-        "$mainMod SHIFT, P, movetoworkspace, 4"
-        "$mainMod SHIFT, G, movetoworkspace, 5"
+        "$mainMod SHIFT, 1, movetoworkspace, 1"
+        "$mainMod SHIFT, 2, movetoworkspace, 2"
+        "$mainMod SHIFT, 3, movetoworkspace, 3"
+        "$mainMod SHIFT, 4, movetoworkspace, 4"
+        "$mainMod SHIFT, 5, movetoworkspace, 5"
       ];
 
       binde = [
