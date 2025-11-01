@@ -51,7 +51,7 @@
         };
 
         "hyprland/language" = {
-          format = "󰌌 {long}";
+          format = "󰌌-{long}";
           keyboard-name = "at-translated-set-2-keyboard";
           on-click = "hyprctl switchxkblayout at-translated-set-2-keyboard next";
           expand = true;
@@ -72,7 +72,7 @@
         bluetooth = {
           format-off = "󰂲";
           format-on = "󰂯";
-          format-connected = "󰂯 ({num_connections})";
+          format-connected = "󰂯-({num_connections})";
           tooltip-format = "{controller_alias}\t{controller_address}\n{num_connections} connected";
           tooltip-format-connected = "{controller_alias}\t{controller_address}\n{num_connections} connected\n{device_enumerate}";
           tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
