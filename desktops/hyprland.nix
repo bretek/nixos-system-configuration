@@ -17,7 +17,6 @@
     wlogout
 
     kooha
-    wob
     grim
   ];
 
