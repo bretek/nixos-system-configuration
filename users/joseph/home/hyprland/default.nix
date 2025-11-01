@@ -145,6 +145,7 @@
         "${lib.getExe pkgs.waybar}"
         "${lib.getExe pkgs.dunst}"
         "${lib.getExe pkgs.wayland-pipewire-idle-inhibit}"
+        "wl-paste --watch ${lib.getExe pkgs.cliphist} store"
       ];
 
       bind = [
@@ -165,7 +166,7 @@
         "$mainMod ALT, K, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
         "$mainMod, S, exec, ${./scripts/RofiSearch.sh}" # TODO script
         "$mainMod ALT, H, exec, ${./scripts/RofiKeyBinds.sh}"
-        "$mainMod, V, exec, ${./scripts/ClipManager.sh}" # TODO script
+        "$mainMod, V, exec, ${./scripts/ClipManager.sh}"
         "$mainMod, M, exec, wl-kbptr"
         #TODO screenshot
         #"$mainMod ALT, S, exec, rofi-screenshot"

@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     brillo
+    cliphist
     dunst
     hypridle
     hyprlock
@@ -17,7 +18,6 @@
 
     kooha
     wob
-    cliphist
     grim
   ];
 
