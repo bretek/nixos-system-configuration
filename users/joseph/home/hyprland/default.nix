@@ -162,7 +162,7 @@
         "$mainMod ALT, N, exec, rofi-network-manager"
         "$mainMod ALT, V, exec, ${./scripts/RofiVpn.sh}"
         "$mainMod ALT, B, exec, rofi-bluetooth"
-        "$mainMod ALT, P, exec, rofi-rbw" # TODO crashes
+        "$mainMod ALT, P, exec, rofi-rbw"
         "$mainMod ALT, K, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
         "$mainMod, S, exec, ${./scripts/RofiSearch.sh}" # TODO script
         "$mainMod ALT, H, exec, ${./scripts/RofiKeyBinds.sh}"

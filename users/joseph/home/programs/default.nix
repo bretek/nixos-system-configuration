@@ -6,6 +6,7 @@
     ./gpg.nix
     ./kitty.nix
     ./nvim
+    ./rbw.nix
     ./tmux.nix
     ./zsh.nix
   ];

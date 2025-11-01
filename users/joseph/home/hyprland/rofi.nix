@@ -14,7 +14,7 @@ let
 in
 {
   home.packages = with pkgs; [
-    rofi-rbw
+    rofi-rbw-wayland
     rofi-bluetooth
     # TODO package wayland version
     #rofi-screenshot

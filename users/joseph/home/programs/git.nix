@@ -2,7 +2,7 @@
 {
   programs.git = {
     enable = true;
-    userEmail = config.user-options.email;
+    userEmail = config.user-options.gitEmail;
     userName = "bretek";
     signing = {
       format = "openpgp";
