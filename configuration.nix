@@ -55,6 +55,8 @@ in
       pkgs.inter
       pkgs.fira-mono
       pkgs.nerd-fonts.symbols-only
+
+      pkgs.lato
     ];
     fontconfig.defaultFonts = {
       serif = [ "Inter" ];
