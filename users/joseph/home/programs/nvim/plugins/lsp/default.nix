@@ -18,6 +18,7 @@
           gt = "type_definition";
           ga = "code_action";
           gc = "rename";
+          gs = "signature_help";
         };
       };
     };
@@ -44,6 +45,13 @@
       };
     };
 
+    lsp-signature = {
+      enable = true;
+      settings = {
+        hint_prefix = " ";
+      };
+    };
+
     cmp = {
       enable = true;
 
@@ -65,7 +73,6 @@
 
         sources = [
           { name = "nvim_lsp"; }
-          { name = "nvim_lsp_signature_help"; }
           {
             name = "buffer"; # text within current buffer
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
@@ -83,10 +90,10 @@
 
         window = {
           completion = {
-            border = "none";
+            border = "single";
           };
           documentation = {
-            border = "solid";
+            border = "single";
           };
         };
 
@@ -94,53 +101,66 @@
           "<Down>" = "cmp.mapping.select_next_item()";
           "<Up>" = "cmp.mapping.select_prev_item()";
           "<CR>" = ''
-            cmp.mapping(function(fallback)
-            if cmp.visible() then
-            if require("luasnip").expandable() then
-            require("luasnip").expand()
-            else
-            cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Insert, select = true,})
-            end
-            else
-            fallback()
-            end
-            end)
+            cmp.mapping({
+              i = function(fallback)
+                if cmp.visible() and cmp.get_active_entry() then
+                  cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+                else
+                  fallback()
+                end
+              end,
+              s = cmp.mapping.confirm({ select = true }),
+              c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+            })
           '';
-          "<S-CR>" = ''
-            cmp.mapping(function(fallback)
-            if cmp.visible() then
-            if require("luasnip").expandable() then
-            require("luasnip").expand()
-            else
-            cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true,})
-            end
-            else
-            fallback()
-            end
-            end)
-          '';
-          "<Tab>" = ''
-            cmp.mapping(function(fallback)
-            if cmp.visible() then
-            cmp.select_next_item()
-            elseif require("luasnip").locally_jumpable(1) then
-            require("luasnip").jump(1)
-            else
-            fallback()
-            end
-            end, {"i", "s"})
-          '';
-          "<S-Tab>" = ''
-            cmp.mapping(function(fallback)
-            if cmp.visible() then
-            cmp.select_prev_item()
-            elseif require("luasnip").locally_jumpable(-1) then
-            require("luasnip").jump(-1)
-            else
-            fallback()
-            end
-            end, {"i", "s"})
-          '';
+          #          "<CR>" = ''
+          #            cmp.mapping(function(fallback)
+          #            if cmp.visible() then
+          #            if require("luasnip").expandable() then
+          #            require("luasnip").expand()
+          #            else
+          #            cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Insert, select = true,})
+          #            end
+          #            else
+          #            fallback()
+          #            end
+          #            end)
+          #          '';
+          #          "<S-CR>" = ''
+          #            cmp.mapping(function(fallback)
+          #            if cmp.visible() then
+          #            if require("luasnip").expandable() then
+          #            require("luasnip").expand()
+          #            else
+          #            cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true,})
+          #            end
+          #            else
+          #            fallback()
+          #            end
+          #            end)
+          #          '';
+          #          "<Tab>" = ''
+          #            cmp.mapping(function(fallback)
+          #            if cmp.visible() then
+          #            cmp.select_next_item()
+          #            elseif require("luasnip").locally_jumpable(1) then
+          #            require("luasnip").jump(1)
+          #            else
+          #            fallback()
+          #            end
+          #            end, {"i", "s"})
+          #          '';
+          #          "<S-Tab>" = ''
+          #            cmp.mapping(function(fallback)
+          #            if cmp.visible() then
+          #            cmp.select_prev_item()
+          #            elseif require("luasnip").locally_jumpable(-1) then
+          #            require("luasnip").jump(-1)
+          #            else
+          #            fallback()
+          #            end
+          #            end, {"i", "s"})
+          #          '';
         };
       };
     };
