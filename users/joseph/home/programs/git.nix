@@ -2,16 +2,18 @@
 {
   programs.git = {
     enable = true;
-    userEmail = config.user-options.gitEmail;
-    userName = "bretek";
     signing = {
       format = "openpgp";
       key = "61121921C9F8117C";
       signByDefault = true;
     };
-    extraConfig = {
+    settings = {
       init = {
         defaultBranch = "main";
+      };
+      user = {
+        email = config.user-options.gitEmail;
+        name = "bretek";
       };
     };
   };

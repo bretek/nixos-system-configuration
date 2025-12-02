@@ -8,7 +8,7 @@
     hyprlock
     hyprpaper
     playerctl
-    rofi-wayland
+    rofi
     swayimg
     waybar
     wayland-pipewire-idle-inhibit
