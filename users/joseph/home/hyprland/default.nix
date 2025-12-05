@@ -52,6 +52,7 @@
 
       monitor = [
         "DP-1, 3840x1600@144, 0x0, 1"
+        "HEADLESS-2, disable"
       ];
 
       device = [
@@ -139,6 +140,7 @@
       };
 
       exec-once = [
+        "hyprctl output create headless"
         "${lib.getExe pkgs.hypridle}"
         "${lib.getExe pkgs.waybar}"
         "${lib.getExe pkgs.dunst}"
