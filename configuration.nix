@@ -83,9 +83,9 @@ in
     "xow_dongle-firmware"
   ];
 
-  virtualisation.docker.rootless = {
+  virtualisation.docker = {
     enable = true;
-    setSocketVariable = true;
+    storageDriver = "btrfs";
   };
   users.extraGroups.docker.members = [ "joseph" ];
 }
