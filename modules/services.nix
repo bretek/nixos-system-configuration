@@ -1,10 +1,13 @@
 { ... }:
 {
+  imports = [
+    ./sound.nix
+  ];
+
   services = {
     fail2ban.enable = true;
     flatpak.enable = true;
     fstrim.enable = true;
-    pipewire.enable = true;
     printing.enable = true;
     openssh = {
       enable = true;
