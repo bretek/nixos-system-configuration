@@ -1,7 +1,6 @@
 {
   pkgs,
   config,
-  lib,
   ...
 }:
 {
@@ -12,7 +11,7 @@
     layout = [
       {
         label = "lock";
-        action = "${lib.getExe pkgs.hyprlock}";
+        action = "loginctl lock-session";
         keybind = "l";
       }
       {

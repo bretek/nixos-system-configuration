@@ -3,11 +3,7 @@
   programs.hyprlock = {
     enable = true;
     settings = {
-      general = {
-        hide_cursor = true;
-        grace = 5;
-        no_fade_in = false;
-      };
+      general.hide_cursor = true;
 
       animations = {
         enabled = true;
@@ -42,10 +38,6 @@
         {
           text = " $USER";
           color = "rgb(${config.colorScheme.palette.base05})";
-          outline_thickness = 2;
-          dots_size = 0.2;
-          dots_spacing = 0.4;
-          dots_center = true;
           font_size = 11;
           position = "0, 0";
           halign = "center";

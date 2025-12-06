@@ -8,7 +8,7 @@
         before_sleep_cmd = "loginctl lock-session";
         after_sleep_cmd = "hyprctl dispatch dpms on";
         ignore_dbus_inhibit = false;
-        lock_cmd = "pidof hyprlock || hyprlock";
+        lock_cmd = "pidof hyprlock || hyprlock --grace 0 --no-fade-in";
       };
 
       listener = [
@@ -19,7 +19,7 @@
         }
         {
           timeout = 300;
-          on-timeout = "loginctl lock-session";
+          on-timeout = "pidof hyprlock || hyprlock --grace 5";
         }
         {
           timeout = 600;
