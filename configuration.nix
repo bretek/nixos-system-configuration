@@ -44,6 +44,9 @@ in
     networkmanager = {
       enable = true;
       wifi.powersave = config.system-options.isLaptop;
+      plugins = [
+        pkgs.networkmanager-openvpn
+      ];
     };
   };
   environment.etc.hosts.mode = "0755";
