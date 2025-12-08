@@ -86,6 +86,9 @@ in
     "xow_dongle-firmware"
   ];
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    storageDriver = if config.system-options.driveFormat == "btrfs" then "btrfs" else null;
+  };
   users.extraGroups.docker.members = [ "joseph" ];
 }
