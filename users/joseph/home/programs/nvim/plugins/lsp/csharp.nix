@@ -9,6 +9,6 @@
       c_sharp
     ];
 
-    lsp.servers.csharp_ls.enable = true;
+    lsp.servers.roslyn_ls.enable = true;
   };
 }
