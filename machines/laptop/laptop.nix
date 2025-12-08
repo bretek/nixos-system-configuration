@@ -10,6 +10,7 @@
   system-options = {
     name = "nixos-laptop";
     isLaptop = true;
+    driveFormat = "ext4";
   };
 
   home-manager.users.joseph = {

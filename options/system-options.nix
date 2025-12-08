@@ -10,6 +10,10 @@
         type = lib.types.bool;
         default = false;
       };
+      driveFormat = lib.mkOption {
+        type = lib.types.str;
+        default = "btrfs";
+      };
     };
   };
 }

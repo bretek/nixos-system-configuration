@@ -10,6 +10,7 @@
   system-options = {
     name = "nixos-desktop";
     isLaptop = false;
+    driveFormat = "btrfs";
   };
 
   home-manager.users.joseph = {
