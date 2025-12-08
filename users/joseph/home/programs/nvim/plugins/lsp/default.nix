@@ -5,6 +5,7 @@
     ./docker.nix
     ./nix.nix
     ./terraform.nix
+    ./typescript.nix
   ];
   programs.nixvim.plugins = {
     lsp = {
