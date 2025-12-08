@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./angular.nix
     ./csharp.nix
     ./docker.nix
     ./nix.nix
