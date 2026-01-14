@@ -13,7 +13,7 @@ let
 in
 {
   imports = [
-    ./desktops/default.nix
+    ./desktops
     ./modules
     ./options/allowed-unfree.nix
     ./options/system-options.nix
