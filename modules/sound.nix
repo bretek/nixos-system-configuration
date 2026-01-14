@@ -1,6 +1,11 @@
-{ ... }:
+{ pkgs, ... }:
 {
   security.rtkit.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    wireplumber
+  ];
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
