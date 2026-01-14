@@ -4,9 +4,11 @@
     ./angular.nix
     ./csharp.nix
     ./docker.nix
+    ./html.nix
     ./nix.nix
     ./terraform.nix
     ./typescript.nix
+    ./yaml.nix
   ];
   programs.nixvim.plugins = {
     lsp = {
@@ -32,7 +34,10 @@
       fromVscode = [
         {
           lazyLoad = true;
-          paths = "${pkgs.vimPlugins.friendly-snippets}";
+          paths = [
+            "${pkgs.vimPlugins.friendly-snippets}"
+            "${pkgs.vscode-extensions.angular.ng-template}"
+          ];
         }
       ];
     };
