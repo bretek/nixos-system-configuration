@@ -2,6 +2,7 @@
 {
   imports = [
     ../../configuration.nix
+    ../../modules/syncthing.nix
     ./drives
     ./gpu.nix
     ./hardware-configuration.nix
