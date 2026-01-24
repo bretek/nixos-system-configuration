@@ -6,6 +6,7 @@
     ./gpu.nix
     ./hardware-configuration.nix
     ../../modules/displaylink.nix
+    ../../modules/syncthing.nix
   ];
 
   system-options = {
