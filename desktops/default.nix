@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./kde.nix
     ./hyprland.nix
   ];
   services.displayManager.sddm = {
