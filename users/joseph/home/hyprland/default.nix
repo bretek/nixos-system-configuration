@@ -16,26 +16,32 @@
     platformTheme.name = "gtk";
     style = {
       name = "gtk2";
-      package = pkgs.kdePackages.breeze;
+      package = pkgs.vimix-gtk-themes;
     };
   };
   gtk = {
     enable = true;
-    theme.name = "Breeze-Dark";
-    theme.package = pkgs.kdePackages.breeze-gtk;
+    theme.name = "Vimix-dark-doder";
+    theme.package = pkgs.vimix-gtk-themes;
     iconTheme = {
-      name = "breeze";
-      package = pkgs.kdePackages.breeze-icons;
+      name = "Vimix";
+      package = pkgs.vimix-icon-theme;
     };
     gtk3 = {
       extraConfig.gtk-application-prefer-dark-theme = true;
     };
   };
+  home.pointerCursor = {
+    gtk.enable = true;
+    name = "Vimix-cursors";
+    package = pkgs.vimix-cursors;
+    size = 16;
+  };
   dconf = {
     enable = true;
     settings = {
       "org/gnome/desktop/interface" = {
-        gtk-theme = "Breeze-Dark";
+        gtk-theme = "Vimix-dark-doder";
         color-scheme = "prefer-dark";
       };
     };
