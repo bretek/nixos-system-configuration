@@ -5,6 +5,7 @@
     ./drives
     ./gpu.nix
     ./hardware-configuration.nix
+    ../../modules/displaylink.nix
   ];
 
   system-options = {
