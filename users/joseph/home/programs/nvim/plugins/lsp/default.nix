@@ -4,6 +4,7 @@
     ./angular.nix
     ./csharp.nix
     ./docker.nix
+    ./go.nix
     ./html.nix
     ./nix.nix
     ./terraform.nix
