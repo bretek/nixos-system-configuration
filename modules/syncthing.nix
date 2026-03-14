@@ -18,6 +18,12 @@
             "nas"
           ];
         };
+        "JosephPictures" = {
+          path = "/home/joseph/Pictures";
+          devices = [
+            "nas"
+          ];
+        };
       };
       options = {
         urAccepted = -1;
