@@ -24,6 +24,12 @@
             "nas"
           ];
         };
+        "JosephMusic" = {
+          path = "/home/joseph/Music";
+          devices = [
+            "nas"
+          ];
+        };
       };
       options = {
         urAccepted = -1;
