@@ -91,4 +91,5 @@ in
     storageDriver = if config.system-options.driveFormat == "btrfs" then "btrfs" else null;
   };
   users.extraGroups.docker.members = [ "joseph" ];
+  users.extraGroups.dialout.members = [ "joseph" ];
 }
