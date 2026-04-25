@@ -1,7 +1,7 @@
 { pkgs, lib, ... }:
 let
   sources = import ../nix/sources.nix;
-  lanzaboote = import sources.lanzaboote;
+  lanzaboote = import sources.lanzaboote { inherit pkgs; };
 in
 {
   imports = [
@@ -15,6 +15,8 @@ in
   boot.loader.systemd-boot.enable = lib.mkForce false;
   boot.lanzaboote = {
     enable = true;
+    autoGenerateKeys.enable = true;
+    autoEnrollKeys.enable = true;
     pkiBundle = "/var/lib/sbctl";
   };
 }
