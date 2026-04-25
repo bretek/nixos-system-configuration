@@ -70,7 +70,7 @@ in
 
   # APPS
   environment.systemPackages = with pkgs; [
-    firefox
+    firefox-bin
     libreoffice-qt
     vlc
 
@@ -84,6 +84,8 @@ in
   allowedUnfree = [
     "terraform"
     "xow_dongle-firmware"
+    "firefox-bin"
+    "firefox-bin-unwrapped"
   ];
 
   virtualisation.docker = {
