@@ -5,10 +5,10 @@
         "homepage": "https://matrix.to/#/#agenix:nixos.org",
         "owner": "ryantm",
         "repo": "agenix",
-        "rev": "fcdea223397448d35d9b31f798479227e80183f6",
-        "sha256": "1d4m7hsq727q7ndjqmgyl8vkbkqjwps962ygmv2mcc5dbqzgn963",
+        "rev": "b027ee29d959fda4b60b57566d64c98a202e0feb",
+        "sha256": "1wlpvpj45qfixdzhmk2cgiwlkyaf8a5mjy2jp5lsx2wsxblclngm",
         "type": "tarball",
-        "url": "https://github.com/ryantm/agenix/archive/fcdea223397448d35d9b31f798479227e80183f6.tar.gz",
+        "url": "https://github.com/ryantm/agenix/archive/b027ee29d959fda4b60b57566d64c98a202e0feb.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "base16-schemes": {
@@ -29,22 +29,22 @@
         "homepage": "https://nix-community.github.io/home-manager/",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f3902b5d8767985680875ad86d028371100faeb3",
-        "sha256": "04wrwfwhiwx2rylr74gha0p4g3ly9slgcc7nbs9gzdxw7mmzvpig",
+        "rev": "0d02ec1d0a05f88ef9e74b516842900c41f0f2fe",
+        "sha256": "16mcnqpcgl3s2frq9if6vb8rpnfkmfxkz5kkkjwlf769wsqqg3i9",
         "type": "tarball",
-        "url": "https://github.com/nix-community/home-manager/archive/f3902b5d8767985680875ad86d028371100faeb3.tar.gz",
+        "url": "https://github.com/nix-community/home-manager/archive/0d02ec1d0a05f88ef9e74b516842900c41f0f2fe.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "lanzaboote": {
-        "branch": "v0.4.3",
+        "branch": "v1.0.0",
         "description": "Secure Boot for NixOS [maintainers=@blitz @raitobezarius @nikstur]",
         "homepage": "",
         "owner": "nix-community",
         "repo": "lanzaboote",
-        "rev": "88b8a563ff5704f4e8d8e5118fb911fa2110ca05",
-        "sha256": "016pgbh27zjwbzq1li1d4r40b37vwmnz8khh04vspd5gw91szzi1",
+        "rev": "e8c096ade12ec9130ff931b0f0e25d2f1bc63607",
+        "sha256": "17srvx92f0xymayfislm5d87bjd6n1p80s350my8si737iaa16a4",
         "type": "tarball",
-        "url": "https://github.com/nix-community/lanzaboote/archive/88b8a563ff5704f4e8d8e5118fb911fa2110ca05.tar.gz",
+        "url": "https://github.com/nix-community/lanzaboote/archive/e8c096ade12ec9130ff931b0f0e25d2f1bc63607.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "version": "0.4.2"
     },
@@ -66,10 +66,10 @@
         "homepage": null,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1619d00f223caaae934aa6d1a55aa4e24df64da9",
-        "sha256": "0wwn8jyjrhc15mcir08pcyz1xx5mhsgmlghmwx5svpk15vai68ri",
+        "rev": "d24b3b0d40c4e2c14ed2c66b6d15d0dd94a99a95",
+        "sha256": "11vf5mg4fz3a97gqs4ivks3ivandgpd637cm07kynrlgh0w46wyv",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/1619d00f223caaae934aa6d1a55aa4e24df64da9.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/d24b3b0d40c4e2c14ed2c66b6d15d0dd94a99a95.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixvim": {
@@ -78,10 +78,10 @@
         "homepage": "https://nix-community.github.io/nixvim",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "6bdabc1359d7658e1d9ce065db37df92e904b581",
-        "sha256": "1jn6d9aqav5yd6ark9y609qh7w3sx2c3pvai75pxjzvj9vygax50",
+        "rev": "b8f76bf5751835647538ef8784e4e6ee8deb8f95",
+        "sha256": "1v4gghvjrzj7kwzvwgwjbhbiavwzbc5ncwjicc1jgjwdmbdaqhw7",
         "type": "tarball",
-        "url": "https://github.com/nix-community/nixvim/archive/6bdabc1359d7658e1d9ce065db37df92e904b581.tar.gz",
+        "url": "https://github.com/nix-community/nixvim/archive/b8f76bf5751835647538ef8784e4e6ee8deb8f95.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
