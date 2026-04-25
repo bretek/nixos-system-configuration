@@ -151,7 +151,8 @@
         "${lib.getExe pkgs.waybar}"
         "${lib.getExe pkgs.dunst}"
         "${lib.getExe pkgs.wayland-pipewire-idle-inhibit}"
-        "wl-paste --watch ${lib.getExe pkgs.cliphist} store"
+        "wl-paste --type text --watch ${lib.getExe pkgs.cliphist} store"
+        "wl-paste --type image --watch ${lib.getExe pkgs.cliphist} store"
       ];
 
       bind = [

@@ -14,6 +14,7 @@
     wayland-pipewire-idle-inhibit
     wayprompt
     wdisplays
+    wl-clipboard
     wlogout
 
     kooha
