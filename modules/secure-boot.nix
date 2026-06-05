@@ -1,6 +1,6 @@
 { pkgs, lib, ... }:
 let
-  sources = import ../nix/sources.nix;
+  sources = import ../npins;
   lanzaboote = import sources.lanzaboote { inherit pkgs; };
 in
 {

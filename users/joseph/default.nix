@@ -3,7 +3,7 @@
   ...
 }:
 let
-  sources = import ../../nix/sources.nix;
+  sources = import ../../npins;
   nixvim = import sources.nixvim;
   nix-colors = import sources.nix-colors { };
 in
@@ -24,12 +24,12 @@ in
 
   home-manager.users.joseph = {
     imports = [
-      nixvim.homeModules.nixvim
-      nix-colors.homeManagerModules.default
       (sources.agenix + "/modules/age-home.nix")
-      ./home
-      ../user-options.nix
       ../../secrets/joseph/user-options.nix
+      ../user-options.nix
+      ./home
+      nix-colors.homeManagerModules.default
+      nixvim.homeModules.nixvim
     ];
 
     age.secrets.secret1.file = ../../secrets/secret1.age;

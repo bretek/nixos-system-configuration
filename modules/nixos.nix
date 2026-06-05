@@ -1,6 +1,7 @@
 { ... }:
 {
   nix = {
+    channel.enable = false;
     optimise = {
       automatic = true;
     };

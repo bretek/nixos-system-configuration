@@ -50,6 +50,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
+    configType = "hyprlang";
     xwayland.enable = true;
 
     settings = {
@@ -184,7 +185,7 @@
         "ALT, tab, cyclenext"
         "ALT, tab, bringactivetotop"
 
-        "$mainMod SHIFT, I, togglesplit"
+        "$mainMod SHIFT, I, layoutmsg, togglesplit"
         "$mainMod SHIFT, T, pseudo"
 
         # Navigation
@@ -237,9 +238,9 @@
         ",XF86AudioPrev, exec, playerctl previous"
       ];
 
-      windowrulev2 = [
-        "idleinhibit fullscreen, fullscreen:1"
-      ];
+      #windowrulev2 = [
+      #  "idleinhibit fullscreen, fullscreen:1"
+      #];
 
       env = [
         # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #

@@ -1,15 +1,11 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 let
-  sources = import ./nix/sources.nix;
-  pkgs = import sources.nixpkgs {
-    config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) config.allowedUnfree;
-  };
-  home-manager = sources.home-manager;
-  agenix = sources.agenix;
+  sources = import ./npins;
 in
 {
   imports = [
@@ -20,11 +16,14 @@ in
     ./overlays
     ./secrets/configuration.nix
     ./users
-    (home-manager + "/nixos")
-    (agenix + "/modules/age.nix")
+    (sources.home-manager + "/nixos")
+    (sources.agenix + "/modules/age.nix")
   ];
 
-  nixpkgs.pkgs = pkgs;
+  nixpkgs.config = {
+    allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) config.allowedUnfree;
+    permittedInsecurePackages = pkg: builtins.elem (lib.getName pkg) config.permittedInsecure;
+  };
 
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
@@ -70,20 +69,25 @@ in
 
   # APPS
   environment.systemPackages = with pkgs; [
+    # Basic apps
     firefox-bin
     libreoffice-qt
     vlc
 
-    wineWowPackages.stable
+    # Compatibility tools
+    wineWow64Packages.stable
     winetricks
 
+    # Basic CLI utils
     unzip
-    (pkgs.callPackage (agenix + "/pkgs/agenix.nix") { })
+    npins
+    (pkgs.callPackage (sources.agenix + "/pkgs/agenix.nix") { })
+    vim
   ];
 
   allowedUnfree = [
     "terraform"
-    "xow_dongle-firmware"
+    "xone-dongle-firmware"
     "firefox-bin"
     "firefox-bin-unwrapped"
   ];

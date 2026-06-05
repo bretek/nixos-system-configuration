@@ -7,7 +7,10 @@
       ipc = false;
       preload = [ "${./wallpapers/black_sand.jpg}" ];
       wallpaper = [
-        ",${./wallpapers/black_sand.jpg}"
+        {
+          monitor = "";
+          path = "${./wallpapers/black_sand.jpg}";
+        }
       ];
     };
   };
