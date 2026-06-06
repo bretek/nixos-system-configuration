@@ -1,7 +1,11 @@
 { ... }:
+let
+  sources = import ../npins;
+in
 {
   nix = {
     channel.enable = false;
+    nixPath = [ "nixpkgs=${sources.nixpkgs}" ];
     optimise = {
       automatic = true;
     };
