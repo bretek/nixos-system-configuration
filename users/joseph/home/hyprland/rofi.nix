@@ -16,8 +16,6 @@ in
   home.packages = with pkgs; [
     rofi-rbw-wayland
     rofi-bluetooth
-    # TODO package wayland version
-    #rofi-screenshot
     rofi-pulse-select
     rofi-network-manager
   ];

@@ -176,8 +176,7 @@
         "$mainMod ALT, H, exec, ${./scripts/RofiKeyBinds.sh}"
         "$mainMod, V, exec, ${./scripts/ClipManager.sh}"
         "$mainMod, M, exec, wl-kbptr"
-        #TODO screenshot
-        #"$mainMod ALT, S, exec, rofi-screenshot"
+        "$mainMod ALT, S, exec, ${./scripts/Screenshot.sh}"
 
         # Windowing
         "$mainMod, SPACE, togglefloating"

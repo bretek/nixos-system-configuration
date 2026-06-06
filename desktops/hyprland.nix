@@ -4,6 +4,7 @@
     brillo
     cliphist
     dunst
+    grimblast
     hypridle
     hyprlock
     hyprpaper
@@ -16,9 +17,7 @@
     wdisplays
     wl-clipboard
     wlogout
-
-    kooha
-    grim
+    xdg-user-dirs
   ];
 
   hardware.brillo.enable = true;
