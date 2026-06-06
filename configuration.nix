@@ -72,6 +72,7 @@ in
     # Basic apps
     firefox-bin
     libreoffice-qt
+    snapshot
     vlc
 
     # Compatibility tools
