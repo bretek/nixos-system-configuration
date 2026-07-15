@@ -30,6 +30,7 @@
         ];
         modules-center = [ "clock" ];
         modules-right = [
+          "custom/recorder"
           "hyprland/language"
           "pulseaudio"
           "bluetooth"
@@ -146,6 +147,17 @@
               today = "<span color='#${config.colorScheme.palette.base04}'><b>{}</b></span>";
             };
           };
+        };
+
+        "custom/recorder" = {
+          format = "";
+          return-type = "json";
+          interval = 60;
+          exec-if = "pgrep wf-recorder";
+          exec = "echo '{\"class\": \"recording\"}'";
+          tooltip = false;
+          signal = 5;
+          on-click = ../scripts/ScreenRecord.sh;
         };
       };
     };

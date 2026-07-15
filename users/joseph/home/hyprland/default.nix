@@ -178,6 +178,7 @@
         "$mainMod, V, exec, ${./scripts/ClipManager.sh}"
         "$mainMod, M, exec, wl-kbptr"
         "$mainMod ALT, S, exec, ${./scripts/Screenshot.sh}"
+        "$mainMod ALT, R, exec, ${./scripts/ScreenRecord.sh}"
 
         # Windowing
         "$mainMod, SPACE, togglefloating"

@@ -10,6 +10,7 @@
     hyprpaper
     hyprshutdown
     hyprtoolkit
+    libnotify
     playerctl
     rofi
     swayimg
@@ -17,6 +18,7 @@
     wayland-pipewire-idle-inhibit
     wayprompt
     wdisplays
+    wf-recorder
     wl-clipboard
     wlogout
     xdg-user-dirs
