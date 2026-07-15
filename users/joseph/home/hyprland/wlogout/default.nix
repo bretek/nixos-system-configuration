@@ -16,17 +16,17 @@
       }
       {
         label = "reboot";
-        action = "systemctl reboot";
+        action = "hyprshutdown -t 'Restarting...' -post-cmd 'systemctl reboot'";
         keybind = "r";
       }
       {
         label = "shutdown";
-        action = "shutdown now";
+        action = "hyprshutdown -t 'Shutting down...' -post-cmd 'shutdown now'";
         keybind = "x";
       }
       {
         label = "logout";
-        action = "hyprctl dispatch exit 0";
+        action = "hyprshutdown";
         keybind = "o";
       }
       {
