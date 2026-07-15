@@ -1,7 +1,15 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   hardware = {
-    bluetooth.enable = true;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+      settings = {
+        General = {
+          FastConnectable = true;
+        };
+      };
+    };
     steam-hardware.enable = true;
     xone.enable = true;
     usb-modeswitch.enable = true;

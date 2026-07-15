@@ -5,6 +5,7 @@
   ];
 
   services = {
+    blueman.enable = true;
     fail2ban.enable = true;
     flatpak.enable = true;
     fstrim.enable = true;
