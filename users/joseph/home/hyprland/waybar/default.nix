@@ -58,7 +58,7 @@
         };
 
         "hyprland/language" = {
-          format = "󰌌-{long}";
+          format = "{short} 󰌌";
           keyboard-name = "at-translated-set-2-keyboard";
           on-click = "hyprctl switchxkblayout at-translated-set-2-keyboard next";
           expand = true;
@@ -77,23 +77,41 @@
         };
 
         bluetooth = {
+          format-no-controller = "󰂲";
+          format-disabled = "󰂲";
           format-off = "󰂲";
           format-on = "󰂯";
-          format-connected = "󰂯-({num_connections})";
-          tooltip-format = "{controller_alias}\t{controller_address}\n{num_connections} connected";
-          tooltip-format-connected = "{controller_alias}\t{controller_address}\n{num_connections} connected\n{device_enumerate}";
-          tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
-          tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+          format-connected = "󰂱";
+          format-connected-battery = "{icon}";
+          format-icons = [
+            "󰥇"
+            "󰤾"
+            "󰤿"
+            "󰥀"
+            "󰥀"
+            "󰥁"
+            "󰥂"
+            "󰥃"
+            "󰥄"
+            "󰥅"
+            "󰥆"
+            "󰥈"
+          ];
+          tooltip-format = "{controller_alias}\n{num_connections} connected";
+          tooltip-format-connected = "{controller_alias}\n{num_connections} connected\n{device_enumerate}";
+          tooltip-format-enumerate-connected = "{device_alias}";
+          tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_battery_percentage}%";
           on-click = "${lib.getExe' pkgs.blueman "blueman-manager"}";
         };
 
         network = {
           format-wifi = " {icon}";
           format-ethernet = "󰈀";
-          format-disconnected = "";
+          format-disconnected = "";
+          format-disabled = "";
           tooltip-format = "{ipaddr} {bandwidthUpBits} {bandwidthDownBits}";
           tooltip-format-wifi = "{essid} {icon} {signalStrength}%";
-          tooltip-format-disconnected = " Disconnected";
+          tooltip-format-disconnected = "";
           interval = 1;
           format-icons = [
             "󰤯"
