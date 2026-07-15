@@ -75,6 +75,7 @@ in
     libreoffice-qt
     snapshot
     vlc
+    gnome-calculator
 
     # Compatibility tools
     wineWow64Packages.stable
