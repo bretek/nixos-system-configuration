@@ -50,7 +50,7 @@
     enable = true;
     pinentry = {
       package = pkgs.wayprompt;
-      program = builtins.baseNameOf (lib.getExe pkgs.wayprompt);
+      program = baseNameOf (lib.getExe pkgs.wayprompt);
     };
     # TODO abstract terminal integrations
     enableZshIntegration = true;
