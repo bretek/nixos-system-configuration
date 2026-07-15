@@ -5,6 +5,7 @@
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
+    ./hyprtoolkit.nix
     ./rofi.nix
     ./waybar
     ./wl-kbptr.nix

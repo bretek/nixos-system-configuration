@@ -25,6 +25,7 @@ in
   home-manager.users.joseph = {
     imports = [
       (sources.agenix + "/modules/age-home.nix")
+      ../../home-manager-overlays
       ../../secrets/joseph/user-options.nix
       ../user-options.nix
       ./home

@@ -9,6 +9,7 @@
     hyprlock
     hyprpaper
     hyprshutdown
+    hyprtoolkit
     playerctl
     rofi
     swayimg
