@@ -31,6 +31,7 @@
     gtk3 = {
       extraConfig.gtk-application-prefer-dark-theme = true;
     };
+    gtk4.theme = null;
   };
   home.pointerCursor = {
     gtk.enable = true;
@@ -50,17 +51,16 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
     configType = "hyprlang";
     xwayland.enable = true;
 
+    systemd.enable = false;
     settings = {
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
 
       monitor = [
         "DP-1, 3840x1600@144, 0x0, 1"
-        "HEADLESS-2, disable"
       ];
 
       device = [
@@ -103,7 +103,6 @@
       };
 
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
       };
 
@@ -118,8 +117,6 @@
         mouse_move_enables_dpms = true;
         key_press_enables_dpms = true;
         vrr = 1;
-        enable_swallow = true;
-        swallow_regex = "^(kitty)$";
         initial_workspace_tracking = 0;
         middle_click_paste = false;
         enable_anr_dialog = true; # Application not Responding (ANR)
@@ -133,11 +130,6 @@
 
       xwayland = {
         enabled = true;
-        force_zero_scaling = true;
-      };
-
-      render = {
-        direct_scanout = 0;
       };
 
       cursor = {
@@ -148,7 +140,6 @@
       };
 
       exec-once = [
-        "hyprctl output create headless"
         "${lib.getExe pkgs.hypridle}"
         "${lib.getExe pkgs.waybar}"
         "${lib.getExe pkgs.dunst}"
