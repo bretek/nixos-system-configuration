@@ -30,6 +30,7 @@
         ];
         modules-center = [ "clock" ];
         modules-right = [
+          "tray"
           "custom/recorder"
           "hyprland/language"
           "pulseaudio"
@@ -49,6 +50,11 @@
           format = "󰐥";
           tooltip = false;
           on-click = "${../scripts/Wlogout.sh}";
+        };
+
+        "tray" = {
+          icon-size = 18;
+          spacing = 8;
         };
 
         "hyprland/language" = {
