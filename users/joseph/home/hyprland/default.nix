@@ -74,7 +74,7 @@
       input = {
         kb_layout = "us,us";
         kb_variant = ",colemak";
-        kb_options = "caps:backspace";
+        kb_options = "caps:backspace,compose:rctrl";
         repeat_delay = "250";
         repeat_rate = "30";
 
