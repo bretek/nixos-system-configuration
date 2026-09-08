@@ -2,6 +2,7 @@
 {
   imports = [
     ../../configuration.nix
+    #../../modules/steam-stream.nix
     ../../modules/syncthing.nix
     ./drives
     ./gpu.nix

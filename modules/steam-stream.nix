@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   steamos-session-select = pkgs.writeShellApplication {
     name = "steamos-session-select";
@@ -9,27 +9,18 @@ let
   };
 in
 {
-  nixpkgs.config.allowUnfreePredicate =
-    pkg:
-    builtins.elem (lib.getName pkg) [
-      "steam"
-      "steam-original"
-      "steam-unwrapped"
-      "steam-run"
-    ];
-
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     steamos-session-select
-    xorg.xvfb
   ];
 
   programs.gamescope = {
     enable = true;
-    capSysNice = true;
+    #capSysNice = true;
     args = [
-      #"--rt"
-      #"--adaptive-sync"
-      #"--steam"
+      "--rt"
+      "--adaptive-sync"
+      "--steam"
+      "--backend headless"
     ];
   };
 
@@ -37,42 +28,35 @@ in
     enable = true;
     gamescopeSession.enable = true;
     gamescopeSession.args = [
-      #"--rt"
-      #"--adaptive-sync"
-      #"--steam"
+      "--rt"
+      "--adaptive-sync"
+      "--steam"
     ];
     gamescopeSession.steamArgs = [
-      #"-tenfoot"
-      #"-pipewire-dmabuf"
-      "-steamdeck"
-      "-steamos3"
+      "-tenfoot"
+      "-pipewire-dmabuf"
+      #"-steamdeck"
+      #"-steamos3"
     ];
     localNetworkGameTransfers.openFirewall = true;
   };
 
   services.sunshine = {
     enable = true;
-    autoStart = false;
+    autoStart = true;
     openFirewall = true;
-    capSysAdmin = true;
-    applications = {
-      env = {
-        PATH = "$(PATH):$(HOME)/.local/bin";
-      };
-      #apps = [
-      #  {
-      #name = "Variable Desktop";
-      #prep-cmd = [
-      #  {
-      #    #do = "sh -c \"kscreen-dector output.DP-1.mode.1920x1080@60 ; kscreen-doctor output.DP-1.mode.\${SUNSHINE_CLIENT_WIDTH}x\${SUNSHINE_CLIENT_HEIGHT}@\${SUNSHINE_CLIENT_FPS}\"";
-      #    do = "kscreen-doctor output.DP-1.mode.1920x1080@60";
-      #    undo = "kscreen-doctor output.DP-1.mode.3840x1600@144";
-      #  }
-      #];
-      #exclude-global-prep-cmd = "false";
-      #auto-detach = "true";
-      #  }
-      #];
+    settings = {
+      #global_prep_cmd = "[{ \"do\" : \"sh -c \\\"hyprctl keyword monitor HEADLESS-2,$\{SUNSHINE_CLIENT_WIDTH}x$\{SUNSHINE_CLIENT_HEIGHT}@$\{SUNSHINE_CLIENT_FPS},auto,1 && hyprctl keyword monitor DP-1,disable\\\"\", \"undo\" : \"sh -c \\\"hyprctl keyword monitor DP-1,3840x1600@144,0x0,1 && hyprctl keyword monitor HEADLESS-2,disable\\\"\" }]";
+      #capture = "wlr";
     };
   };
+
+  allowedUnfree = [
+    "steam"
+    "steam-original"
+    "steam-run"
+    "steam-unwrapped"
+  ];
+
+  programs.gamemode.enable = true;
 }
