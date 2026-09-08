@@ -14,6 +14,10 @@
         type = lib.types.str;
         default = "btrfs";
       };
+      monitors = lib.mkOption {
+        type = lib.types.str;
+        default = "";
+      };
     };
   };
 }
