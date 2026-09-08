@@ -1,0 +1,1 @@
+nix-prefetch-url --name displaylink-620.zip https://www.synaptics.com/sites/default/files/exe_files/2025-09/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu6.2-EXE.zip 10b9rgxc75x7qfp7h2pc4wmpi56b5v9gc9qpj87xm9gq9iwbn0r5

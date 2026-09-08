@@ -14,11 +14,11 @@ in
     ./options/allowed-unfree.nix
     ./options/system-options.nix
     ./overlays
-    ./secrets/configuration.nix
     ./users
     (sources.home-manager + "/nixos")
     (sources.agenix + "/modules/age.nix")
-  ];
+  ]
+  ++ lib.optional (builtins.pathExists ./secrets/configuration.nix) ./secrets/configuration.nix;
 
   nixpkgs.config = {
     allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) config.allowedUnfree;

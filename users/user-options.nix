@@ -4,6 +4,7 @@
     user-options = {
       email = lib.mkOption {
         type = lib.types.str;
+        default = "";
       };
       gitEmail = lib.mkOption {
         type = lib.types.str;

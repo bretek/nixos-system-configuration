@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   ...
 }:
 let
@@ -26,12 +27,12 @@ in
     imports = [
       (sources.agenix + "/modules/age-home.nix")
       ../../home-manager-overlays
-      ../../secrets/joseph/user-options.nix
       ../user-options.nix
       ./home
       nix-colors.homeManagerModules.default
       nixvim.homeModules.nixvim
-    ];
+    ]
+    ++ lib.optional (builtins.pathExists ../../secrets/joseph/user-options.nix) ../../secrets/joseph/user-options.nix;
 
     age.secrets.secret1.file = ../../secrets/secret1.age;
 
