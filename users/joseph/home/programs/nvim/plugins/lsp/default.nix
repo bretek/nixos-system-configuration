@@ -28,7 +28,10 @@
       };
     };
 
-    lsp-format.enable = true;
+    lsp-format = {
+        enable = true;
+        package = pkgs.vimPlugins.lsp-format-nvim;
+    };
 
     luasnip = {
       enable = true;

@@ -1,4 +1,6 @@
 { ... }:
 {
-  imports = [ ];
+  imports = [
+    ./lsp-format-nvim.nix
+  ];
 }
