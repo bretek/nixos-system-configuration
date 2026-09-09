@@ -1,27 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.packages = [ pkgs.ripgrep ];
   programs.nixvim.plugins = {
     treesitter = {
       enable = true;
-
-      settings = {
-        highlight.enable = true;
-        indent.enable = true;
-
-        #ensure_installed = "all";
-      };
-      #folding = true;
+      highlight.enable = true;
+      nixGrammars = false;
+      nixvimInjections = true;
+      grammarPackages = config.programs.nixvim.plugins.treesitter.package.allGrammars;
     };
-
-    #treesitter-refactor = {
-    #  enable = false;
-    #  highlightDefinitions = {
-    #    enable = true;
-    #    clearOnCursorMove = false;
-    #  };
-    #};
-
-    #hmts.enable = true;
   };
 }
