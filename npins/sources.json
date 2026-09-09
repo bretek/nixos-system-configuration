@@ -90,9 +90,9 @@
       },
       "branch": "nixos-26.05",
       "submodules": false,
-      "revision": "667c8471f4a0fb24d702d1a61af8609f1a5f1ba6",
-      "url": "https://github.com/nix-community/nixvim/archive/667c8471f4a0fb24d702d1a61af8609f1a5f1ba6.tar.gz",
-      "hash": "sha256-pRwjfB5HQJ3m8J8bOR43pPHtHI7VUJSqwLA3P06cOY0="
+      "revision": "68c2edd2787f055d9c306bcfe726f3b8f11b9441",
+      "url": "https://github.com/nix-community/nixvim/archive/68c2edd2787f055d9c306bcfe726f3b8f11b9441.tar.gz",
+      "hash": "sha256-i8v07Plhfpx/nVFMvnMSC6P05RQ43mbLQsS5grni4Vk="
     }
   },
   "version": 7
