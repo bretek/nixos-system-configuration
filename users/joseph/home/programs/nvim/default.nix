@@ -58,6 +58,8 @@
       undofile = true;
 
       foldlevel = 99;
+
+      winborder = "single";
     };
   };
 }
