@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.packages = with pkgs; [
     docker-compose-language-service
@@ -7,7 +7,7 @@
 
   programs.nixvim.plugins = {
     treesitter.grammarPackages = [
-      pkgs.vimPlugins.nvim-treesitter.builtGrammars.dockerfile
+      config.programs.nixvim.plugins.treesitter.package.builtGrammars.dockerfile
     ];
 
     lsp.servers = {

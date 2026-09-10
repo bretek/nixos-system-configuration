@@ -1,14 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
-  home.packages = [
-    pkgs.nixfmt
-    pkgs.nixd
-    pkgs.nix-doc
+  home.packages = with pkgs; [
+    nixfmt
+    nixd
+    nix-doc
   ];
 
   programs.nixvim.plugins = {
     treesitter.grammarPackages = [
-      pkgs.vimPlugins.nvim-treesitter.builtGrammars.nix
+      config.programs.nixvim.plugins.treesitter.package.builtGrammars.nix
     ];
 
     lsp.servers.nixd = {

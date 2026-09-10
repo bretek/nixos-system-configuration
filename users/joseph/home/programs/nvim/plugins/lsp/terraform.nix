@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.packages = with pkgs; [
     terraform-ls
@@ -9,7 +9,7 @@
 
   programs.nixvim.plugins = {
     treesitter.grammarPackages = [
-      pkgs.vimPlugins.nvim-treesitter.builtGrammars.terraform
+      config.programs.nixvim.plugins.treesitter.package.builtGrammars.terraform
     ];
 
     lsp.servers = {

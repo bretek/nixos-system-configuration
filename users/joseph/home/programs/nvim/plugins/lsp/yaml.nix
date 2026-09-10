@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ config, ... }:
 {
   programs.nixvim.plugins = {
     treesitter.grammarPackages = [
-      pkgs.vimPlugins.nvim-treesitter.builtGrammars.yaml
+      config.programs.nixvim.plugins.treesitter.package.builtGrammars.yaml
     ];
 
     lsp.servers.yamlls.enable = true;
