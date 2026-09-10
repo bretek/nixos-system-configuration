@@ -29,8 +29,8 @@
     };
 
     lsp-format = {
-        enable = true;
-        package = pkgs.vimPlugins.lsp-format-nvim;
+      enable = true;
+      package = pkgs.vimPlugins.lsp-format-nvim;
     };
 
     luasnip = {
@@ -124,54 +124,6 @@
               c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
             })
           '';
-          #          "<CR>" = ''
-          #            cmp.mapping(function(fallback)
-          #            if cmp.visible() then
-          #            if require("luasnip").expandable() then
-          #            require("luasnip").expand()
-          #            else
-          #            cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Insert, select = true,})
-          #            end
-          #            else
-          #            fallback()
-          #            end
-          #            end)
-          #          '';
-          #          "<S-CR>" = ''
-          #            cmp.mapping(function(fallback)
-          #            if cmp.visible() then
-          #            if require("luasnip").expandable() then
-          #            require("luasnip").expand()
-          #            else
-          #            cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true,})
-          #            end
-          #            else
-          #            fallback()
-          #            end
-          #            end)
-          #          '';
-          #          "<Tab>" = ''
-          #            cmp.mapping(function(fallback)
-          #            if cmp.visible() then
-          #            cmp.select_next_item()
-          #            elseif require("luasnip").locally_jumpable(1) then
-          #            require("luasnip").jump(1)
-          #            else
-          #            fallback()
-          #            end
-          #            end, {"i", "s"})
-          #          '';
-          #          "<S-Tab>" = ''
-          #            cmp.mapping(function(fallback)
-          #            if cmp.visible() then
-          #            cmp.select_prev_item()
-          #            elseif require("luasnip").locally_jumpable(-1) then
-          #            require("luasnip").jump(-1)
-          #            else
-          #            fallback()
-          #            end
-          #            end, {"i", "s"})
-          #          '';
         };
       };
     };
@@ -195,10 +147,5 @@
     dap = {
       enable = true;
     };
-
-    #none-ls = {
-    #  enable = true;
-    #  sources.formatting.csharpier.enable = true;
-    #};
   };
 }
