@@ -2,9 +2,10 @@
 {
   imports = [
     ./lsp
-    ./treesitter.nix
+    ./opencode.nix
     ./snack.nix
     ./telescope.nix
+    ./treesitter.nix
     ./ts-autotag.nix
   ];
 
