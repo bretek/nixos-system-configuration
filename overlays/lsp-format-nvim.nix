@@ -1,8 +1,5 @@
-{ pkgs, ... }:
+{ ... }:
 {
-  environment.systemPackages = with pkgs; [
-    hello
-  ];
   nixpkgs.overlays = [
     (final: prev: {
       vimPlugins = prev.vimPlugins.extend (

@@ -1,4 +1,6 @@
 { ... }:
 {
-  imports = [ ./hyprtoolkit.nix ];
+  imports = [
+    ./hyprtoolkit.nix
+  ];
 }
