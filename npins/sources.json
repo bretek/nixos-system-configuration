@@ -35,9 +35,9 @@
       },
       "branch": "release-26.05",
       "submodules": false,
-      "revision": "af2beae5f0fae0a4310cc0e6aef2572f56090353",
-      "url": "https://github.com/nix-community/home-manager/archive/af2beae5f0fae0a4310cc0e6aef2572f56090353.tar.gz",
-      "hash": "sha256-ESQnuNHEDChsB4IxoLRhscVahqkDWkTb+qdIz8euYt4="
+      "revision": "ec172013fa62135f58fb58dd17ae9651e8f39727",
+      "url": "https://github.com/nix-community/home-manager/archive/ec172013fa62135f58fb58dd17ae9651e8f39727.tar.gz",
+      "hash": "sha256-LWiBv9yAYFi2LPbUhDGHPGKYskJQjj2fw12OlyO1uQo="
     },
     "lanzaboote": {
       "type": "GitRelease",
@@ -77,9 +77,9 @@
       },
       "branch": "nixos-26.05",
       "submodules": false,
-      "revision": "a50de1b7d8a586adc18d2395c19de7d6058e6030",
-      "url": "https://github.com/NixOS/nixpkgs/archive/a50de1b7d8a586adc18d2395c19de7d6058e6030.tar.gz",
-      "hash": "sha256-uslt2pqShTIXDdAHRHv2QkYLsVdY8Oqwz0EA48/RSM8="
+      "revision": "6d663c0533ff269008fb84e45930151e37c99db9",
+      "url": "https://github.com/NixOS/nixpkgs/archive/6d663c0533ff269008fb84e45930151e37c99db9.tar.gz",
+      "hash": "sha256-mDNo95riUw8k0MA2Btzj/OuiMcfLKofqIliLYsLbrSY="
     },
     "nixvim": {
       "type": "Git",
@@ -90,9 +90,9 @@
       },
       "branch": "nixos-26.05",
       "submodules": false,
-      "revision": "68c2edd2787f055d9c306bcfe726f3b8f11b9441",
-      "url": "https://github.com/nix-community/nixvim/archive/68c2edd2787f055d9c306bcfe726f3b8f11b9441.tar.gz",
-      "hash": "sha256-i8v07Plhfpx/nVFMvnMSC6P05RQ43mbLQsS5grni4Vk="
+      "revision": "4836e77b1798cd42e2de28593bec4c1788da08f5",
+      "url": "https://github.com/nix-community/nixvim/archive/4836e77b1798cd42e2de28593bec4c1788da08f5.tar.gz",
+      "hash": "sha256-9oBHyJtUyunZL+6v0Ub8Y759cXcejQiTHpXtGcx5RLs="
     }
   },
   "version": 7
