@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../../configuration.nix
@@ -13,6 +13,7 @@
     isLaptop = false;
     driveFormat = "btrfs";
     monitors = "DP-1, 3840x1600@144, 0x0, 1";
+    kernelVersion = pkgs.linuxPackages_7_2;
   };
 
   home-manager.users.joseph = {

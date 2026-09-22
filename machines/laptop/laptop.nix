@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../../configuration.nix
@@ -14,6 +14,7 @@
     isLaptop = true;
     driveFormat = "ext4";
     monitors = "eDP-1, 2160x1440@60, 0x0, 1.5";
+    kernelVersion = pkgs.linuxPackages_6_18;
   };
 
   home-manager.users.joseph = {

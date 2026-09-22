@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ pkgs, lib, ... }:
 {
   options = {
     system-options = {
@@ -17,6 +17,10 @@
       monitors = lib.mkOption {
         type = lib.types.str;
         default = "";
+      };
+      kernelVersion = lib.mkOption {
+        type = lib.types.raw;
+        default = pkgs.linuxPackages_6_18;
       };
     };
   };
