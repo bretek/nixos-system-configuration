@@ -13,7 +13,7 @@
     name = "nixos-laptop";
     isLaptop = true;
     driveFormat = "ext4";
-    monitors = "eDP-1, 2160x1440@60, 0x0, 1";
+    monitors = "eDP-1, 2160x1440@60, 0x0, 1.5";
   };
 
   home-manager.users.joseph = {
