@@ -5,6 +5,7 @@
     ./git.nix
     ./gpg.nix
     ./kitty.nix
+    ./music
     ./nvim
     ./rbw.nix
     ./tmux.nix
