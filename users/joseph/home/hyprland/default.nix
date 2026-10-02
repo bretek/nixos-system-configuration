@@ -59,6 +59,10 @@
     configType = "hyprlang";
     xwayland.enable = true;
 
+    plugins = [
+      pkgs.hyprlandPlugins.hyprbars
+    ];
+
     systemd.enable = false;
     settings = {
       "$mainMod" = "SUPER";
@@ -135,6 +139,17 @@
 
       xwayland = {
         enabled = true;
+      };
+
+      plugin = {
+        hyprbars = {
+          bar_height = 40;
+          bar_text_size = 15;
+          "hyprbars-button" = [
+            "rgb(ff605c), 20, , hyprctl dispatch killactive"
+            "rgb(ffbd44), 20, , hyprctl dispatch fullscreen 1"
+          ];
+        };
       };
 
       cursor = {
@@ -214,6 +229,10 @@
         "$mainMod SHIFT, 5, movetoworkspace, 5"
       ];
 
+      bindm = [
+        "$mainMod, mouse:272, movewindow"
+      ];
+
       binde = [
         "$mainMod SHIFT, LEFT, resizeactive,-50 0"
         "$mainMod SHIFT, RIGHT, resizeactive,50 0"
@@ -233,6 +252,10 @@
         ",XF86AudioPlay, exec, playerctl play-pause"
         ",XF86AudioNext, exec, playerctl next"
         ",XF86AudioPrev, exec, playerctl previous"
+      ];
+
+      windowrule = [
+        "match:float false, hyprbars:no_bar true"
       ];
 
       #windowrulev2 = [
