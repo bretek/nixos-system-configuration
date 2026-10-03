@@ -21,6 +21,7 @@ in
     distrho-ports
     dragonfly-reverb
     eq10q
+    (pkgs.callPackage ./fabla.nix { })
     fil-plugins
     geonkick
     guitarix
