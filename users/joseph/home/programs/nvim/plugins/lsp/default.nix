@@ -17,15 +17,28 @@
       keymaps = {
         lspBuf = {
           K = "hover";
-          gr = "references";
           gd = "definition";
-          gi = "implementation";
           gt = "type_definition";
           ga = "code_action";
           gc = "rename";
           gs = "signature_help";
         };
       };
+
+      keymaps.extra = [
+        {
+          mode = "n";
+          key = "gr";
+          action.__raw = "function() require('snacks').picker.lsp_references() end";
+          options.desc = "References (Snacks)";
+        }
+        {
+          mode = "n";
+          key = "gi";
+          action.__raw = "function() require('snacks').picker.lsp_implementations() end";
+          options.desc = "Implementations (Snacks)";
+        }
+      ];
     };
 
     lsp-format = {
